@@ -1,0 +1,23 @@
+.todos-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 100px;
+  line-height: 21px;
+
+  letter-spacing: -2.5px;
+
+  color: #CCCCCC;
+}
+
+body {
+  background: #F2F2F2;
+}
+
+.task-name {
+  display:  inline;
+}
+
+.task-list {
+  list-style-type: none;
+}

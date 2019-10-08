@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>todos</title>
+</head>
+<body>
+  <h2 class="todos-header">todos</h2>
+  <div id="enterLine" class="header">
+    <span onclick="newElement()" class="add">
+      <button type="button" name="button"></button>
+    </span>
+    <input type="text" id="add-task" placeholder="What to do next?">
+  </div>
+
+  <div class="tasks">
+    <ul class = "task-list">
+      <li>
+        <label class = "dfg">
+          <input type = "checkbox">
+        </label>
+        <div class="task-name">HTML</div>
+        <button class="delete-buttom" type="button" name="button"></button>
+      </li>
+      <li >
+        <label class = "dfg">
+          <input type = "checkbox">
+        </label>
+        <div class="task-name">CSS</div>
+        <button class="delete-buttom" type="button" name="button"></button>
+      </li>
+      <li>
+        <label class = "dfg">
+          <input type = "checkbox">
+        </label>
+        <div class="task-name">JS</div>
+        <button class="delete-buttom" type="button" name="button"></button>
+      </li>
+      <li>
+        <label class = "dfg">
+          <input type = "checkbox">
+        </label>
+        <div class="task-name"JS>tools</div>
+        <button class="delete-buttom" type="button" name="button"></button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="buttom-bar">
+    3 items left
+    <button class="btn btn-default" type="button" name="button">All</button>
+    <button class="btn btn-default" type="button" name="button">Active</button>
+    <button class="btn btn-default" type="button" name="button">Completed</button>
+    <button class="btn btn-default" type="button" name="button">Clear completed</button>
+  </div>
+</body>
+</html>
