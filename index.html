@@ -1,59 +1,82 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="utf-8">
-  <title>todos</title>
+    <meta charset="UTF-8">
+    <title>Todos</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <h2 class="todos-header">todos</h2>
-  <div id="enterLine" class="header">
-    <span onclick="newElement()" class="add">
-      <button type="button" name="button"></button>
-    </span>
-    <input type="text" id="add-task" placeholder="What to do next?">
-  </div>
-
-  <div class="tasks">
-    <ul class = "task-list">
-      <li>
-        <label class = "dfg">
-          <input type = "checkbox">
-        </label>
-        <div class="task-name">HTML</div>
-        <button class="delete-buttom" type="button" name="button"></button>
-      </li>
-      <li >
-        <label class = "dfg">
-          <input type = "checkbox">
-        </label>
-        <div class="task-name">CSS</div>
-        <button class="delete-buttom" type="button" name="button"></button>
-      </li>
-      <li>
-        <label class = "dfg">
-          <input type = "checkbox">
-        </label>
-        <div class="task-name">JS</div>
-        <button class="delete-buttom" type="button" name="button"></button>
-      </li>
-      <li>
-        <label class = "dfg">
-          <input type = "checkbox">
-        </label>
-        <div class="task-name"JS>tools</div>
-        <button class="delete-buttom" type="button" name="button"></button>
-      </li>
-    </ul>
-  </div>
-
-  <div class="buttom-bar">
-    3 items left
-    <button class="btn btn-default" type="button" name="button">All</button>
-    <button class="btn btn-default" type="button" name="button">Active</button>
-    <button class="btn btn-default" type="button" name="button">Completed</button>
-    <button class="btn btn-default" type="button" name="button">Clear completed</button>
-  </div>
+<div class="wrapper">
+    <header class="header">
+        <h1 class="header-title">todos</h1>
+    </header>
+    <main class="content">
+        <section class="entry-section">
+            <div class="new-task">
+                <button class="select-all" aria-label="Select all tasks" type="button" name="button"></button>
+                <input class="input" type="text" placeholder="What needs to be done?" aria-label="make a new task"/>
+            </div>
+        </section>
+        <section class="main-content">
+            <div class="action-tasks">
+                <input class="input-checkbox" type="checkbox" aria-label="HTML" id="HTML-checkbox">
+                <label class="input-task" for="HTML-checkbox">
+                </label>
+                <span class="input-text">HTML</span>
+                <button class="delete-task" aria-label="delete-task"></button>
+            </div>
+            <div class="action-tasks">
+                <input class="input-checkbox" type="checkbox" aria-label="CSS" id="CSS-checkbox">
+                <label class="input-task" for="CSS-checkbox">
+                </label>
+                <span class="input-text">CSS</span>
+                <button class="delete-task" aria-label="delete-task"></button>
+            </div>
+            <div class="action-tasks">
+                <input class="input-checkbox" type="checkbox" aria-label="JS" id="JS-checkbox">
+                <label class="input-task" for="JS-checkbox">
+                </label>
+                <span class="input-text">JS</span>
+                <button class="delete-task" aria-label="delete-task"></button>
+            </div>
+            <div class="action-tasks">
+                <input class="input-checkbox" type="checkbox" aria-label="JS-tools" id="JS-tools-checkbox">
+                <label class="input-task" for="JS-tools-checkbox">
+                </label>
+                <span class="input-text">JS-tools</span>
+                <button class="delete-task" aria-label="delete-task"></button>
+            </div>
+        </section>
+        <section class="bottom-bar">
+            <div class="bottom-bar-items">
+                <span class="items-counter" aria-label="3 items left">3 items left</span>
+            </div>
+            <div class="bottom-bar-items" role="group" aria-label="task options">
+                <input class="bottom-bar-input" type="radio" name="option" checked="checked"
+                       value="All" aria-label="select all tasks" id="All-radio">
+                <label class="bottom-bar-element" for="All-radio">
+                    <span class="bottom-bar-text">All</span>
+                </label>
+                <input class="bottom-bar-input" type="radio" name="option" checked="checked"
+                       value="Active" aria-label="Select active tasks" id="Active-radio">
+                <label class="bottom-bar-element" for="Active-radio">
+                    <span class="bottom-bar-text">Active</span>
+                </label>
+                <input class="bottom-bar-input" type="radio" name="option" checked="checked"
+                       value="Completed" aria-label="Select completed tasks" id="Completed-radio">
+                <label class="bottom-bar-element" for="Completed-radio">
+                    <span class="bottom-bar-text">Completed</span>
+                </label>
+            </div>
+            <div class="options-bar__items">
+                <button class="clear" aria-label="Clear completed">
+                    Clear completed
+                </button>
+            </div>
+        </section>
+    </main>
+</div>
 </body>
 </html>
