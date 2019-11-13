@@ -1,0 +1,262 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+button:focus {
+    outline: solid 2px #C0C0C0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 500px;
+    background: #F7F7F7;
+    padding: 0 30px 10px 30px;
+    align-self: center;
+}
+
+.title {
+    margin: 0;
+    line-height: 100%;
+    text-align: center;
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 100px;
+    color: #CCCCCC;
+    cursor: default;
+}
+
+.main-content {
+    padding: 0 0 0 0;
+    margin: 0 0 5px 0;
+    background-color: white;
+    border: solid 1px #F0F0F0;
+}
+
+.new-task {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    border-bottom: solid 1px lightgrey;
+}
+
+.check-button {
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    padding: 0;
+    margin: 0 0 0 2px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.tick {
+    width: 50px;
+    height: 50px;
+    fill: none;
+    stroke: gray;
+    stroke-width: 3;
+}
+
+
+.check-button:hover .tick {
+    stroke: green;
+}
+
+.check-button:active {
+    background-color: #F0F0F0;
+}
+
+.new-task {
+    flex: 1;
+    border: none;
+    outline: none;
+    color: #505050;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    padding: 3px;
+    margin: 0 0 0 2px;
+}
+
+.new-task::placeholder {
+    color: #AFAFAF;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.tasks {
+    list-style-type: none;
+    margin: 0 0 50px 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px lightgrey;
+    padding: 3px;
+}
+
+.task:hover {
+    background-color: #F0F0F0;
+}
+
+.checkbox-svg {
+    margin: 0 3px 0 0;
+    width: 50px;
+    height: 50px;
+    stroke: lightgrey;
+    fill: none;
+}
+
+.checked-tick {
+    stroke: none;
+    stroke-width: 3px;
+}
+
+.checkbox:focus + .task-label .checkbox-svg {
+    stroke: #C0C0C0;
+    stroke-width: 2px;
+}
+
+.checkbox:checked + .task-label .checkbox-svg .checked-tick,
+.checkbox:checked + .task-label .checkbox-svg {
+    stroke: green;
+}
+
+.task-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: -1000px;
+}
+
+.task-text {
+    flex: 1;
+    fill: none;
+    color: #505050;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    word-break: break-word;
+}
+
+.checkbox:checked ~ .task-text {
+    color: grey;
+    text-decoration: line-through;
+}
+
+.task-delete {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    font-size: 0;
+}
+
+.cross {
+    width: 50px;
+    height: 50px;
+    stroke-width: 2px;
+    stroke: none;
+}
+
+.task-delete:focus .cross {
+    stroke: lightgrey;
+}
+
+.task:hover .task-delete .cross {
+    stroke: lightgrey;
+}
+
+.task:hover .task-delete:hover .cross {
+    stroke: grey;
+}
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu__items__items-left {
+    cursor: default;
+}
+
+.button-text {
+    padding: 0 5px 0 5px;
+    background-color: transparent;
+    border: solid 1px transparent;
+    color: grey;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.items-left {
+    padding: 3px;
+    color: grey;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    cursor: default;
+}
+
+.filters {
+    padding: 2px;
+}
+
+.bottom-radio-label {
+    border: solid 1px transparent;
+    padding: 0 0 0 2px;
+    cursor: pointer;
+}
+
+.bottom-radio {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -9999px;
+}
+
+.bottom-radio:checked + .bottom-radio-label {
+    color: #4F4F4F;
+    border: solid 1px #AFAFAF;
+    border-radius: 4px;
+}
+
+.bottom-radio:focus + .bottom-radio-label {
+    color: #4F4F4F;
+    outline: solid 2px #AFAFAF;
+    border-color: transparent;
+}
+
+.clear {
+    background-color: transparent;
+    border: solid 1px transparent;
+    border-radius: 1px;
+    color: grey;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.clear:hover {
+    color: #2F2F2F;
+    border: solid 1px #C0C0C0;
+}
